@@ -166,7 +166,7 @@ export default class MinecraftClient extends HTMLElement {
     this.#progress.style.display = 'unset';
     const jarPath = "/files/client_b1.2_02.jar"
     await downloadFileToCheerpJ(
-      "https://archive.org/download/Minecraft-JE-Beta/b1.2_02/b1.2_02.jar",
+      "/b1.2_02.jar",
       jarPath,
       (downloadedBytes, totalBytes) => {
         this.#progress.value = downloadedBytes;
