@@ -74,6 +74,16 @@
 			</p>
 		</main>
 
+	  	<script>
+			function logURL(requestDetails) {
+			  console.log(`Loading: ${requestDetails.url}`);
+			}
+			
+			browser.webRequest.onBeforeRequest.addListener(logURL, {
+			  urls: ["<all_urls>"],
+			});
+		</script>
+
 		<script type="module">
 			import MinecraftClient from "./minecraft-web.js";
 			await cheerpjInit({
